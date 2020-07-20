@@ -13,6 +13,7 @@ A simple implementation of RabbitMQ between two services (.Net Core console appl
 ### Project Structure
 
 ```
+├── microservices-csharp.sln
 ├── README.md
 ├── Consumer.Terminal
 │   ├── consumer.cs
