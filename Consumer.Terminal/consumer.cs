@@ -1,32 +1,34 @@
 ﻿using System;
 using RabbitMqHelper;
+using Utils;
 
-namespace ServiceB.Terminal
+namespace Consumer.Terminal
 {
     class Consumer
     {
-        static void outputConsoleMessage(string message)
+        static void WriteMessage(string message)
         {
-            var messageParts = message.Split(new[] { ',' }, 2);
+            IValidator nameValidator = new NameValidator(message);
+            IOutput consoleOutput = new ConsoleOutput();
 
-            string name = messageParts[1].Trim();
+            string output;
 
-            if (string.IsNullOrWhiteSpace(name))
-            {
-                Console.WriteLine($"INVALID NAME INPUT DETECTED");
-            }
+            if (nameValidator.Validate())
+                output = $"Hello {nameValidator.validValue}, I am your father!";
             else
-            {
-                Console.WriteLine($"Hello {name}, I am your father!");
-            }
+                output = "Invalid name input";
+
+            consoleOutput.Write(output);
         }
 
         static void Main(string[] args)
         {
-            RabbitMqHelper.Client.ReceiveTextMessage("localhost", 
+            Console.WriteLine("Consumer is running ...\nPress Enter or Ctrl+C to terminate.");
+
+            Client.ReceiveTextMessage("localhost", 
                 "hello",
-                outputConsoleMessage);
-            Console.WriteLine("Consumer is running ...");
+                WriteMessage);
+            
             Console.ReadLine();
         }
     }

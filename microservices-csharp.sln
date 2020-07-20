@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Producer.Terminal", "Produc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMqHelper.Lib", "RabbitMqHelper.Lib\RabbitMqHelper.Lib.csproj", "{821FFCDE-4781-4E08-843C-A0F21DDB3875}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils.Lib", "Utils.Lib\Utils.Lib.csproj", "{FEE2CD99-BB28-4DCE-804B-810DB394DA67}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,5 +60,17 @@ Global
 		{821FFCDE-4781-4E08-843C-A0F21DDB3875}.Release|x64.Build.0 = Release|Any CPU
 		{821FFCDE-4781-4E08-843C-A0F21DDB3875}.Release|x86.ActiveCfg = Release|Any CPU
 		{821FFCDE-4781-4E08-843C-A0F21DDB3875}.Release|x86.Build.0 = Release|Any CPU
+		{FEE2CD99-BB28-4DCE-804B-810DB394DA67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEE2CD99-BB28-4DCE-804B-810DB394DA67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEE2CD99-BB28-4DCE-804B-810DB394DA67}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FEE2CD99-BB28-4DCE-804B-810DB394DA67}.Debug|x64.Build.0 = Debug|Any CPU
+		{FEE2CD99-BB28-4DCE-804B-810DB394DA67}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FEE2CD99-BB28-4DCE-804B-810DB394DA67}.Debug|x86.Build.0 = Debug|Any CPU
+		{FEE2CD99-BB28-4DCE-804B-810DB394DA67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEE2CD99-BB28-4DCE-804B-810DB394DA67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEE2CD99-BB28-4DCE-804B-810DB394DA67}.Release|x64.ActiveCfg = Release|Any CPU
+		{FEE2CD99-BB28-4DCE-804B-810DB394DA67}.Release|x64.Build.0 = Release|Any CPU
+		{FEE2CD99-BB28-4DCE-804B-810DB394DA67}.Release|x86.ActiveCfg = Release|Any CPU
+		{FEE2CD99-BB28-4DCE-804B-810DB394DA67}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

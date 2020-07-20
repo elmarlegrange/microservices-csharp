@@ -10,14 +10,15 @@ namespace Producer.Terminal
             Console.WriteLine("Please enter your name: ");
             string name = Console.ReadLine();
 
-            RabbitMqHelper.Client.SendTextMessage(
+            Client.SendTextMessage(
                 "localhost", 
                 "hello", 
                 "hello",
                 $"Hello my name is, {name}"
             );
 
-            Console.WriteLine("Producer is running ...");
+            Console.WriteLine("Posted message to queue.\nPress Enter or Ctrl+C to terminate.");
+
             Console.ReadLine();
         }
     }

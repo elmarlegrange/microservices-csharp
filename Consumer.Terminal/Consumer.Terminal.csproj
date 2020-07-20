@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\RabbitMqHelper.Lib\RabbitMqHelper.Lib.csproj" />
+    <ProjectReference Include="..\Utils.Lib\Utils.Lib.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

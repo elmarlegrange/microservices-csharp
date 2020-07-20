@@ -43,10 +43,10 @@ namespace RabbitMqHelper
             var channel = connection.CreateModel();
             
             channel.QueueDeclare(queue: queueName,
-                                durable: false,
-                                exclusive: false,
-                                autoDelete: false,
-                                arguments: null);
+                durable: false,
+                exclusive: false,
+                autoDelete: false,
+                arguments: null);
 
             var consumer = new EventingBasicConsumer(channel);
             consumer.Received += (model, ea) =>
@@ -55,13 +55,11 @@ namespace RabbitMqHelper
                 var message = Encoding.UTF8.GetString(body);
                 
                 methodToExecute(message);
-                
             };
-            channel.BasicConsume(queue: queueName,
-                                autoAck: true,
-                                consumer: consumer);
 
-            
+            channel.BasicConsume(queue: queueName,
+                autoAck: true,
+                consumer: consumer);
         }
     }
 }
